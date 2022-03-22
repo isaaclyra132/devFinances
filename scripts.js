@@ -122,12 +122,8 @@ const DOM = {
 
 const Utils = {
     formatAmount(value) {
-        value = Number(value.replace(/\,\./g, "")) * 100
-        // value = new Intl.NumberFormat('pt-BR', { 
-        //     style: 'currency', 
-        //     currency: 'BRL' 
-        // }).format(value)
-        return value
+        value = value * 100
+        return Math.round(value)
     },
 
     formatDate(date) {
